@@ -7,6 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #f8fafc; }
+        
+        /* Custom animation for the infinite marquee horizontal scroll */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50%)); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+        /* Pause continuous animation on mouse hover */
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-blue-500 selection:text-white">
@@ -53,32 +68,33 @@
         </div>
     </section>
 
-    <section id="skills" class="max-w-5xl mx-auto px-4 py-16 border-t border-slate-800/60">
+    <section id="skills" class="max-w-5xl mx-auto px-4 py-16 border-t border-slate-800/60 overflow-hidden">
         <h2 class="text-2xl font-bold tracking-tight text-slate-200">Skills & Tools</h2>
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
-                <h3 class="text-lg font-semibold text-blue-400">Cloud Infrastructure</h3>
-                <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                    <li>Microsoft Azure</li>
-                    <li>Infrastructure as Code (IaC)</li>
-                    <li>Resource Management</li>
-                </ul>
-            </div>
-            <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
-                <h3 class="text-lg font-semibold text-teal-400">Automation & Code</h3>
-                <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                    <li>Terraform</li>
-                    <li>PowerShell / Bash</li>
-                    <li>Python Scripting</li>
-                </ul>
-            </div>
-            <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
-                <h3 class="text-lg font-semibold text-indigo-400">Systems & Security</h3>
-                <ul class="mt-3 space-y-2 text-sm text-slate-400">
-                    <li>Ubuntu / Linux Administration</li>
-                    <li>Docker Containers</li>
-                    <li>Vulnerability Management</li>
-                </ul>
+        <p class="mt-2 text-sm text-slate-400 mb-10">Core technologies and stack utilized in engineering pipelines.</p>
+        
+        <div class="relative w-full overflow-hidden bg-slate-900/40 border-y border-slate-800/80 py-8">
+            <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="animate-marquee space-x-12 flex items-center">
+                <div class="flex items-center space-x-12">
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/microsoftazure/3b82f6" alt="Azure"> <span class="text-sm font-semibold text-slate-300">Azure</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform"> <span class="text-sm font-semibold text-slate-300">Terraform</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"> <span class="text-sm font-semibold text-slate-300">Docker</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/ubuntu/E95420" alt="Ubuntu"> <span class="text-sm font-semibold text-slate-300">Ubuntu</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> <span class="text-sm font-semibold text-slate-300">Python</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell"> <span class="text-sm font-semibold text-slate-300">PowerShell</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/github/181717" alt="GitHub"> <span class="text-sm font-semibold text-slate-300">GitHub</span></div>
+                </div>
+                <div class="flex items-center space-x-12">
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/microsoftazure/3b82f6" alt="Azure"> <span class="text-sm font-semibold text-slate-300">Azure</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform"> <span class="text-sm font-semibold text-slate-300">Terraform</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"> <span class="text-sm font-semibold text-slate-300">Docker</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/ubuntu/E95420" alt="Ubuntu"> <span class="text-sm font-semibold text-slate-300">Ubuntu</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/python/3776AB" alt="Python"> <span class="text-sm font-semibold text-slate-300">Python</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/powershell/5391FE" alt="PowerShell"> <span class="text-sm font-semibold text-slate-300">PowerShell</span></div>
+                    <div class="flex items-center space-x-3 bg-slate-900 px-5 py-3 rounded-xl border border-slate-800"><img class="w-6 h-6 invert opacity-80" src="https://cdn.simpleicons.org/github/181717" alt="GitHub"> <span class="text-sm font-semibold text-slate-300">GitHub</span></div>
+                </div>
             </div>
         </div>
     </section>
