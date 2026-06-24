@@ -8,7 +8,7 @@
     <style>
         body { background-color: #ffffff; color: #000000; }
         
-        /* Custom animation for the infinite marquee horizontal scroll */
+        /* Marquee animation logic */
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-50%)); }
@@ -18,7 +18,7 @@
             width: max-content;
             animation: scroll 40s linear infinite;
         }
-        /* Pause continuous animation on mouse hover */
+        /* Hover pause effect */
         .animate-marquee:hover {
             animation-play-state: paused;
         }
@@ -78,7 +78,7 @@
         </div>
     </section>
 
-<section id="skills" class="max-w-5xl mx-auto px-4 py-20 border-t border-neutral-200 overflow-hidden">
+    <section id="skills" class="max-w-5xl mx-auto px-4 py-20 border-t border-neutral-200 overflow-hidden">
         <h2 class="text-xs font-bold tracking-widest uppercase text-neutral-400 mb-2">02 / Skills & Tools</h2>
         <p class="text-sm text-neutral-500 mb-10">Core technologies, frameworks, and data platforms utilized in engineering workflows.</p>
         
@@ -87,7 +87,6 @@
             <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
             
             <div class="animate-marquee space-x-6 flex items-center">
-                
                 <div class="flex items-center space-x-6">
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/azure.jpeg" alt="Azure" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">Azure</span></div>
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/azuredevops.jpeg" alt="Azure DevOps" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">Azure DevOps</span></div>
@@ -106,7 +105,6 @@
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/sql.png" alt="SQL" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">SQL</span></div>
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/foundry.jpeg" alt="Foundry" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">Foundry</span></div>
                 </div>
-
                 <div class="flex items-center space-x-6">
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/azure.jpeg" alt="Azure" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">Azure</span></div>
                     <div class="flex items-center space-x-3 bg-white px-4 py-2.5 border border-neutral-200"><img src="https://skillimages.blob.core.windows.net/skillimages/azuredevops.jpeg" alt="Azure DevOps" class="w-5 h-5 object-contain"> <span class="text-xs font-bold uppercase tracking-wider text-black">Azure DevOps</span></div>
@@ -161,23 +159,24 @@
 
             <div class="flex flex-col space-y-6">
                 <div class="w-full aspect-[21/9] bg-neutral-50 border border-neutral-200 flex items-center justify-center p-6">
-                    <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest">[ Proactive Vulnerability Remediation Flowchart ]</span>
+                    <img src="https://skillimages.blob.core.windows.net/skillimages/montecarlo.png" alt="Stochastic Simulation Flowchart" class="w-full h-full object-contain mix-blend-multiply" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="text-xs font-mono text-neutral-400 uppercase tracking-widest hidden">[ Monte Carlo Flowchart ]</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
                     <div class="md:col-span-2">
-                        <h3 class="text-xl font-black uppercase tracking-tight text-black">Automated Endpoint Security & Patching Workflow</h3>
+                        <h3 class="text-xl font-black uppercase tracking-tight text-black">Algorithmic Logic: Stochastic Optimization</h3>
                         <p class="mt-3 text-sm text-neutral-600 leading-relaxed max-w-2xl">
-                            Developed a structured logical workflow for endpoint auditing and proactive risk elimination. The process maps out unauthorized software detection, patch orchestration across Linux/Windows endpoints, and strict system-state validation to maintain security compliance thresholds.
+                            Developed a mathematical probability model using Python and Monte Carlo methods to analyze variance and predict optimal strategies. The code executes thousands of iterative loops to process random variables, demonstrating advanced algorithmic logic, computational efficiency, and scripting proficiency.
                         </p>
                     </div>
                     <div class="flex flex-col justify-between items-start md:items-end">
                         <div class="flex flex-wrap gap-1.5 justify-start md:justify-end">
-                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">Tanium</span>
-                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">PowerShell</span>
-                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">SecOps</span>
+                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">Python</span>
+                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">Algorithms</span>
+                            <span class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border border-neutral-300 text-neutral-600 bg-white">Scripting</span>
                         </div>
-                        <a href="https://github.com/Tadeofloo" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors border-b-2 border-black pb-0.5">
-                            View Project
+                        <a href="https://github.com/Tadeofloo/strategies-to-complete-the-2026-world-cup-album" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-xs font-bold uppercase tracking-widest text-black hover:text-neutral-600 transition-colors border-b-2 border-black pb-0.5">
+                            View Source Code
                             <svg class="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>
